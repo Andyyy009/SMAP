@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.andyyy.touristapp.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <Button
+        android:id="@+id/buttonToMap"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:onClick="openMap"
+        android:text="Mapa"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonToMonument" />
+
+    <Button
+        android:id="@+id/buttonToOverview"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="80dp"
+        android:onClick="openMonumentOverview"
+        android:text="Přehled památek"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <Button
+            android:id="@+id/buttonToMonument"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:onClick="openMonumentDetail"
+            android:text="Tip na výlet"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonToOverview" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="204dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="64dp"
+        android:text="Menu"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.design.widget.CoordinatorLayout>
